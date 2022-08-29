@@ -8,25 +8,16 @@
       <v-icon color="#C3F942" small class="mt-n8">fas fa-ellipsis-h</v-icon>
     </v-toolbar>
     <div>
-      <BarChart
-        :chart-id="chartId"
-        :width="width"
-        :height="height"
-        :css-classes="cssClasses"
-        :styles="styles"
-        :plugins="plugins"
-      />
     </div>
   </v-card>
 </template>
 
 <script>
-import BarChart from "@/Chart/Barchart.js";
 export default {
   name: "Audience",
   data: () => ({}),
   components: {
-    BarChart,
+    
   },
   props: {
     chartId: {

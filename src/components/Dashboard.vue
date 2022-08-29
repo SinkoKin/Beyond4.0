@@ -1,5 +1,4 @@
 <template>
-    
     <div class="dashboard" >
         <v-container class="my-4">
             <v-row>
@@ -28,45 +27,39 @@
             <v-spacer></v-spacer>
             <v-col cols="12" md="4">
               <h1 class="headline  grey--text">Trade Visitors </h1>
-                <v-progress-circular
+                <!--<v-progress-circular
                   :value="76"
                   color="blue lighten-2"
                   size="110"
                   width="15">76%</v-progress-circular>
-              <h6 class="pl-10 grey--text"><br/>grey:<strong>male</strong></h6>
-              <h6 class="pl-10 blue--text">lighten blue:<strong>female</strong></h6>
+                  <h6 class="pl-10 grey--text"><br/>grey:<strong>male</strong></h6>
+              <h6 class="pl-10 blue--text">lighten blue:<strong>female</strong></h6>-->
+                 <div class="mt-5">
+                     <PieChart />
+                 </div>
+              
           </v-col>
-          
-      </v-row>
-      <br/><br/>
-      <v-row>
-        <v-card>
-      <v-tabs
-      white
-      background-color="blue-lighten"
-      show-arrows
-      >
-      <v-tabs-slider color="teal lighten-3"></v-tabs-slider>
-      <v-tab
-      >
-        Normal
-      </v-tab>
-      <v-tab
-      >
-        Headmap
-      </v-tab>
-      <v-tab
-      >
-        Position 
-      </v-tab>
-    </v-tabs>
+           </v-row>
+           <v-row>
+            <v-card>
+        <v-tabs
+            white
+            background-color="blue-lighten"
+            show-arrows>
+          <v-tabs-slider color="teal lighten-3"></v-tabs-slider>
+          <v-tab>Normal State</v-tab>
+          <v-tab>Headmap</v-tab>
+          <v-tab>position-x</v-tab>
+       </v-tabs>
     </v-card>
-      </v-row>
-  </v-container>       
- </div>
+  </v-row>
+ </v-container>       
+</div>
 </template>
 
 <script>
+import PieChart from "@/components/PieChart.vue";
+
     export default {
         name: "Dashboard",
         data() {
@@ -80,6 +73,9 @@
                 ],
                 
             }
+        },
+        components :{
+            PieChart,
         },
         methods: {
             onButtonClick(item) {

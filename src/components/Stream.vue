@@ -12,52 +12,20 @@
       </div>
     </v-toolbar>
     <div class="mt-5">
-      <Linehart
-        :chart-id="chartId"
-        :width="width"
-        :height="height"
-        :css-classes="cssClasses"
-        :styles="styles"
-        :plugins="plugins"
-      />
+      <Barchart />
     </div>
   </v-card>
 </template>
 
 <script>
-import LineChart from "@/Chart/Linechart.js";
+import Barchart from '@/components/Barchart.vue';
 export default {
   name: "Stream",
   data: () => ({}),
   components: {
-    LineChart,
+    Barchart,
   },
-  props: {
-    chartId: {
-      type: String,
-      default: "line-chart",
-    },
-    width: {
-      type: Number,
-      default: 400,
-    },
-    height: {
-      type: Number,
-      default: 230,
-    },
-    cssClasses: {
-      default: "",
-      type: String,
-    },
-    styles: {
-      type: Object,
-      default: () => {},
-    },
-    plugins: {
-      type: Array,
-      default: () => {},
-    },
-  },
+  
 };
 </script>
 
