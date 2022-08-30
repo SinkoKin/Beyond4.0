@@ -10,7 +10,7 @@
         <v-list flat class="mb-12">
             <v-list-item-group v-model="selectedItem" color="black">
                  <v-list-item active-class="border" class="ml-2 my-3"
-                :ripple="false" router to="/">
+                :ripple="false" router to="/backgr">
               <v-list-item-action>
                  <v-list-item-icon>
                      <v-icon>fa-home</v-icon>

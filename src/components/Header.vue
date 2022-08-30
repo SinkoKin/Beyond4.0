@@ -7,7 +7,7 @@
             <span class="font-weight-dark"> Dashborad</span>
         </v-toolbar-title>
         <template>
-            <v-btn color="blue" dark small absolute bottom right fab>
+            <v-btn color="blue" dark small absolute bottom right fab router to="/">
                 <v-icon> mdi-dark mdi-logout</v-icon>
             </v-btn>
         </template>

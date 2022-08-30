@@ -43,14 +43,26 @@
            <v-row>
             <v-card>
         <v-tabs
+            v-model="tab"
             white
             background-color="blue-lighten"
             show-arrows>
           <v-tabs-slider color="teal lighten-3"></v-tabs-slider>
-          <v-tab>Normal State</v-tab>
-          <v-tab>Headmap</v-tab>
-          <v-tab>position-x</v-tab>
+          <v-icon>mdi-chart-line-variant</v-icon>
+          <v-tab href="#normal">
+              Normal State 
+          </v-tab>
+          <v-icon>mdi-google-maps</v-icon>
+          <v-tab href="#Headmap">
+              Headmap
+          </v-tab>
+          <v-icon>mdi-details</v-icon>
+          <v-tab href="#Position">position-x</v-tab>
        </v-tabs>
+       <v-tabs-items v-model="tab">
+          <v-tab-item :key="1" value="normal">
+          </v-tab-item>
+       </v-tabs-items>
     </v-card>
   </v-row>
  </v-container>       
